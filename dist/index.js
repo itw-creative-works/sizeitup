@@ -35,6 +35,8 @@ function getDirectorySize(dir) {
 }
 
 function displaySize(dirOrFilePath, options) {
+  dirOrFilePath = dirOrFilePath || './';
+  
   options = options || {};
   options.showFiles = typeof options.showFiles === 'undefined' ? false : options.showFiles;
   options.log = typeof options.log === 'undefined' ? false : options.log;
