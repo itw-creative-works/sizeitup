@@ -1,6 +1,6 @@
 {
   "name": "sizeitup",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An easy command-line tool to display directory and file sizes",
   "main": "dist/index.js",
   "scripts": {
