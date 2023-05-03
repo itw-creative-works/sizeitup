@@ -1,0 +1,35 @@
+{
+  "name": "sizeitup",
+  "version": "1.0.1",
+  "description": "An easy command-line tool to display directory and file sizes",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
+    "prepare": "node -e 'require(`prepare-package`)()'"
+  },
+  "bin": {
+    "sizeitup": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itw-creative-works/sizeitup.git"
+  },
+  "keywords": [
+    "file size",
+    "directory size",
+    "get size",
+    "backend",
+    "frontend",
+    "productivity"
+  ],  
+  "author": "ITW Creative Works",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itw-creative-works/sizeitup/issues"
+  },
+  "homepage": "https://itwcreativeworks.com",
+  "devDependencies": {
+    "mocha": "^8.4.0",
+    "prepare-package": "^0.0.16"
+  }
+}
