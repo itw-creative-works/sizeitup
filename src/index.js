@@ -32,8 +32,9 @@ const SizeItUp = {
   calculate: function(dirOrFilePath, options) {
     options = options || {};
     options.showFiles = typeof options.showFiles === 'undefined' ? false : options.showFiles;
-    options.log = typeof options.log === 'undefined' ? false : options.log;
+    options.depth = typeof options.depth === 'undefined' ? Infinity : options.depth;
     options.level = options.level || 0;
+    options.log = typeof options.log === 'undefined' ? false : options.log;
 
     const stat = fs.statSync(dirOrFilePath);
 
@@ -54,6 +55,10 @@ const SizeItUp = {
     }
 
     function processDirectory() {
+      if (options.level > options.depth) {
+        return;
+      }
+
       const files = fs.readdirSync(dirOrFilePath);
 
       files.forEach(file => {

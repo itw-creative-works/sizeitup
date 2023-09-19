@@ -45,11 +45,13 @@ npm install -g sizeitup
 To let sizeitup work its magic on a given directory, run:
 
 ```bash
-sizeitup <directory> [--show-files]
+sizeitup <directory> [--show-files] [--depth <depth>]
 ```
-The `--show-files` flag will display the size of each file in the directory, as well as the total size of the directory.
+Replace `<directory>` with the path to the directory you want to analyze.
 
-Replace `<directory>` with the path to the directory you want to analyze. Use the `--show-files` flag to include file sizes in the output - because we all know size matters!
+### Flags
+* `--show-files`: Include files adn their sizes in the output - because we all know size matters!
+* `--depth <depth>`: Specify the depth of the directory tree to display. The default is Infinity.
 
 ## Example
 ```bash

@@ -5,7 +5,8 @@ const Main = require('../dist/index.js');
   const dir = process.argv[2];
   const options = {};
 
-  options.showFiles = process.argv.includes('--show-files');
+  options.showFiles = process.argv.includes('--show-files') || undefined;
+  options.depth = parseInt(_value('--depth')) || undefined;
   options.log = true;
 
   if (!dir) {
@@ -17,3 +18,14 @@ const Main = require('../dist/index.js');
 
   Main.calculate(dir, options);
 }());
+
+
+function _value(name) {
+  const index = process.argv.findIndex(arg => arg.startsWith(name));
+
+  if (index === -1) {
+    return undefined;
+  }
+
+  return process.argv[index].split('=')[1];
+}
