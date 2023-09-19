@@ -1,13 +1,15 @@
 {
   "name": "sizeitup",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "An easy command-line tool to display directory and file sizes",
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
+    "start": "npm run prepare && node ./dist/index.js",
     "prepare": "node -e 'require(`prepare-package`)()'"
   },
   "bin": {
+    "_sizeitup": "./bin/sizeitup",
     "sizeitup": "./dist/index.js"
   },
   "repository": {

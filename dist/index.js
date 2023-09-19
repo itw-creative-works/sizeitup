@@ -103,5 +103,7 @@ if (require.main === module) {
     process.exit(1);
   }
 
+  console.log(`Calculating size of ${dir}...`);
+
   SizeItUp.calculate(dir, options);
 }
