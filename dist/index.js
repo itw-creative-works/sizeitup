@@ -91,19 +91,19 @@ const SizeItUp = {
 module.exports = SizeItUp;
 
 // If running in cli, handle it properly
-if (require.main === module) {
-  const dir = process.argv[2];
-  const options = {};
+// if (require.main === module) {
+//   const dir = process.argv[2];
+//   const options = {};
 
-  options.showFiles = process.argv.includes('--show-files');
-  options.log = true;
+//   options.showFiles = process.argv.includes('--show-files');
+//   options.log = true;
 
-  if (!dir) {
-    console.error('Please provide a directory to display the size of.');
-    process.exit(1);
-  }
+//   if (!dir) {
+//     console.error('Please provide a directory to display the size of.');
+//     process.exit(1);
+//   }
 
-  console.log(`Calculating size of ${dir}...`);
+//   console.log(`Calculating size of ${dir}...`);
 
-  SizeItUp.calculate(dir, options);
-}
+//   SizeItUp.calculate(dir, options);
+// }

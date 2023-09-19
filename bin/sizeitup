@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+const Main = require('../dist/index.js');
+(async function() {
+  'use strict';
+  const dir = process.argv[2];
+  const options = {};
+
+  options.showFiles = process.argv.includes('--show-files');
+  options.log = true;
+
+  if (!dir) {
+    console.error('Please provide a directory to display the size of.');
+    process.exit(1);
+  }
+
+  console.log(`Calculating size of ${dir}...`);
+
+  Main.calculate(dir, options);
+}());
