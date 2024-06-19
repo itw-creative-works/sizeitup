@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg">
+  <a href="https://itwcreativeworks.com">
     <img src="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg" width="100px">
   </a>
 </p>
@@ -26,12 +26,12 @@
 
 Ever wondered how much digital weight your directories are carrying? Look no further! Introducing sizeitup - an easy command-line tool that displays directory and file sizes. It's time to shed those digital pounds!
 
-## Features
+## 🦄 Features
 * Displays the size of a directory and its files
 * Easy to use
 * Lightweight
 
-## Installation
+## 📦 Install Size It Up
 
 To bring sizeitup into your life, simply run:
 
@@ -39,8 +39,7 @@ To bring sizeitup into your life, simply run:
 npm install -g sizeitup
 ```
 
-
-## Usage
+## ⚡️ Usage
 
 To let sizeitup work its magic on a given directory, run:
 
@@ -53,10 +52,26 @@ Replace `<directory>` with the path to the directory you want to analyze.
 * `--show-files`: Include files adn their sizes in the output - because we all know size matters!
 * `--depth <depth>`: Specify the depth of the directory tree to display. The default is Infinity.
 
-## Example
+## 🔧 Example
 ```bash
 sizeitup ./example-dir --show-files
 ```
 
 It's time to sizeitup and see which directories need to hit the digital gym!
 
+
+## 🗨️ Final Words
+If you are still having difficulty, we would love for you to post
+a question to [the Size It Up issues page](https://github.com/itw-creative-works/sizeitup/issues). It is much easier to answer questions that include your code and relevant files! So if you can provide them, we'd be extremely grateful (and more likely to help you find the answer!)
+
+## 📚 Projects Using this Library
+* [ITW Creative Works](https://itwcreativeworks.com)
+* [Somiibo](https://somiibo.com)
+* [Slapform](https://slapform.com)
+* [StudyMonkey](https://studymonkey.ai)
+* [DashQR](https://dashqr.com)
+* [Replyify](https://replyify.app)
+* [SoundGrail](https://soundgrail.com)
+* [Trusteroo](https://trusteroo.com)
+
+Ask us to have your project listed! :)

@@ -1,12 +1,13 @@
 {
   "name": "sizeitup",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "An easy command-line tool to display directory and file sizes",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "node -e 'require(`prepare-package`)()'",
+    "prepare": "node -e \"require('prepare-package')()\"",
     "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
-    "start": "npm run prepare && ./bin/sizeitup $PWD"
+    "start": "npm run prepare && ./bin/sizeitup $PWD",
+    "prepare:watch": "nodemon -w ./src -e '*' --exec 'npm run prepare'"
   },
   "bin": {
     "sizeitup": "./bin/sizeitup"
@@ -29,8 +30,16 @@
     "url": "https://github.com/itw-creative-works/sizeitup/issues"
   },
   "homepage": "https://itwcreativeworks.com",
+  "preparePackage": {
+    "input": "./src",
+    "output": "./dist",
+    "replace": {}
+  },
+  "dependencies": {
+    "itwcw-package-analytics": "^1.0.4"
+  },
   "devDependencies": {
     "mocha": "^8.4.0",
-    "prepare-package": "^1.0.0"
+    "prepare-package": "^1.1.12"
   }
 }
